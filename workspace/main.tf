@@ -1,4 +1,3 @@
-
 resource "tfe_workspace" "workspace" {
   organization      = var.organization
   name              = var.name
@@ -38,9 +37,9 @@ resource "tfe_variable" "AWS_SECRET_ACCESS_KEY" {
 }
 
 resource "tfe_variable" "GOOGLE_CREDENTIALS" {
-  key          = "GOOGLE_CREDENTIALS"
+  key          = "gcp_credentials"
   value        = var.GCP_CREDENTIALS
-  category     = "env"
+  category     = "terraform"
   workspace_id = tfe_workspace.workspace.id
   sensitive    = true
 }
