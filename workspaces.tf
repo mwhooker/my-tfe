@@ -15,7 +15,7 @@ module "tf-tfce-gcp" {
   source     = "./workspace"
   repo       = "mwhooker/tftest"
   name       = "gcp"
-  auto_apply = true
+  auto_apply = false
   working_directory = "gcp"
 
   organization          = tfe_organization.organization.id
@@ -27,7 +27,7 @@ module "tf-tfce-aws" {
   source     = "./workspace"
   repo       = "mwhooker/tftest"
   name       = "aws-rds"
-  auto_apply = true
+  auto_apply = false
   working_directory = "rds"
 
   organization          = tfe_organization.organization.id
